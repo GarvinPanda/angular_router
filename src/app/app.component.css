@@ -1,0 +1,11 @@
+.blue{
+    width: 100%;
+    min-height: 200px;
+    background: #09f;
+}
+
+.red{
+    width: 100%;
+    min-height: 200px;
+    background: #f00;
+}

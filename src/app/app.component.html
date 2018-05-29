@@ -1,4 +1,15 @@
-<h1>
-  {{title}}
-</h1>
-<router-outlet></router-outlet>
+<nav> 
+  <a [routerLink] = "['/home']">首页</a>
+  <a [routerLink] = "['/goods',555]">商品页</a>
+  <!-- 使用queryParams传参 -->
+  <a [routerLink] = "['/detail',444]" [queryParams] = "{goodsId:222}">详情页</a>
+</nav>
+<h2>辅助路由</h2>
+<a [routerLink]="[{outlets:{test:'test1'}}]">test1</a>  
+<a [routerLink]="[{outlets:{test:'test2'}}]">test2</a> 
+<div class="blue">
+  <router-outlet></router-outlet>
+</div>
+<div class="red">
+  <router-outlet name="test"></router-outlet>
+</div>
